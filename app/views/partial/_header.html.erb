@@ -1,11 +1,11 @@
 <section class="header">
   <h1 class="hidden">header</h1>
   <div class="logo">ToDo</div>
-  <div class="user_name">userさん</div>
+  <div class="user_name"><%= "#{current_user.name}さん" %></div>
   <div class="header_nav">
     <ul class="nav_body">
       <li class="nav_item">新規作成</li>
-      <li class="nav_item">ログアウト</li>
+      <li class="nav_item"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
     </ul>
   </div>
 </section>
