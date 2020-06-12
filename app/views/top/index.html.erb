@@ -1,1 +1,5 @@
 <p>top</p>
+
+<% @category.each do |c| %>
+  <p><%="#{c.title}"  %></p>
+<% end %>
