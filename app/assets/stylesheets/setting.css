@@ -1,0 +1,82 @@
+/*-------------------------
+▼ デフォルトのセッティング
+-------------------------*/
+
+
+/* フォントサイズのデフォルトを１０pxに設定 */
+html {
+  /* pcの時のフォントサイズ ー１２p */
+  font-size: 62.5%;
+}
+
+body {
+  /* 最小画面サイズ */
+  min-width: 320px;
+  /* フォントカラー */
+  color: #000;
+  /* 文字間 */
+  letter-spacing: 0.05em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  line-height: 1.25;
+}
+
+/* リストスタイル */
+ul {
+  list-style: none;
+}
+
+/* 行高 */
+p {
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* デフォルトのboxsize */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* リンクのデフォルト */
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: rgba(28, 51, 76, 0.7);
+  text-decoration: none;
+}
+
+/* 画像の初期設定 */
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+h1 {font-size: 4rem;
+  line-height: 1.5;
+
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2.4rem
+}
+
+p, a {
+  font-size: 1.6rem;
+  line-height: 1.75;
+}
+
