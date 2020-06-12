@@ -4,7 +4,8 @@
   <div class="user_name"><%= "#{current_user.name}さん" %></div>
   <div class="header_nav">
     <ul class="nav_body">
-      <li class="nav_item"><%= link_to "新規作成", new_category_path %></li>
+      <li class="nav_item"><%= link_to "category", new_category_path %></li>
+      <li class="nav_item"><%= link_to "task", new_task_path %></li>
       <li class="nav_item"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
     </ul>
   </div>
