@@ -14,11 +14,12 @@
   flex-wrap: wrap;
   text-align: center;
   margin-bottom: 30px;
+
+  @media (max-width: 414px) {
+    height: auto;
+  }
 }
 
-.category_area{
-  padding: 10px;
-}
 
 .category_area_1{
   width: 30%;
@@ -46,9 +47,19 @@
   background-color: #faf4d3;
 }
 
+.category_area{
+  padding: 10px;
+
+  @media (max-width: 414px) {
+    width: 90%;
+    height: auto;
+    min-height: 400px;
+  }
+}
 
 .category_header {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #000;
+  margin-bottom: 10px;
 }

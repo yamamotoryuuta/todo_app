@@ -1,5 +1,11 @@
-<%= form_with model: @category, url:{ action: :update} do |f| %>
-<%= f.label :title %>
-<%= f.text_field :title %>
-<%= f.submit "編集する", data: { confirm: "編集してもいいですか？" } %>
-<% end %>
+<div class="task_container">
+  <h1>カテゴリーを編集する</h1>
+  <%= form_with model: @category, url:{ action: :update} do |f| %>
+  <div class="form_card">
+      <%= f.label :title, class: 'form_label'%>
+      <%= f.text_field :title, class: 'form_field' %>
+  </div>
+  <%= f.submit "編集する", data: { confirm: "編集してもいいですか？" } %>
+  <% end %>
+  
+</div>
