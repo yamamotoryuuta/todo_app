@@ -1,6 +1,13 @@
-<h1>category</h1>
-<% @category.each do |c| %>
-<p><%= c.title %></p>
-<p><%= link_to "編集", edit_category_path(c) %></p>
-<% end %>
+<div class="category_container">
+    <% @category.each.with_index(1) do |c, i| %>
+      <%= tag.div(class: "category_area_#{i} category_area") do %>
+        
+          <div class="category_header">
+            <p class="category_title"><%= c.title %></p>
+            <%= link_to "編集する", edit_category_path(c) %>
+          </div>
+
+        <% end %>
+    <% end %>
+</div>
 

@@ -1,5 +1,5 @@
 <%= form_with model: @category, url:{ action: :update} do |f| %>
 <%= f.label :title %>
 <%= f.text_field :title %>
-<%= f.submit "編集する" %>
+<%= f.submit "編集する", data: { confirm: "編集してもいいですか？" } %>
 <% end %>
