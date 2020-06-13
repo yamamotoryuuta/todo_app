@@ -6,7 +6,16 @@
             <p class="category_title"><%= c.title %></p>
             <%= link_to "編集する", edit_category_path(c) %>
           </div>
+          <% c.tasks.each do |t| %>
+            <p>task_name:<%= t.name %></p>
+            <p>memo:<%= t.memo %></p>
+            <%= link_to "編集", edit_task_path(t) %>
+            <%= link_to "削除", task_path(t), method: :delete, data: { confirm: "#{t.name}を削除して大丈夫ですか？" } %>
+          <% end %>
 
+          <p>
+            <%= link_to "taskを追加する", new_task_path(category_id: c.id) %>
+          </p>
         <% end %>
     <% end %>
 </div>

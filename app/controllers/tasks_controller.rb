@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
+  before_action :set_task , only: %i( edit update destroy)
   def new
     @task = Task.new
-    @category = Category.find(1)
   end
 
   def create
@@ -14,15 +14,28 @@ class TasksController < ApplicationController
   end
 
   def edit
-    
+    @categories = Category.where(user: current_user)
   end
 
   def update
-    
+    if @task.update_attributes(task_params)
+      redirect_to :root
+    else
+      render action: :edit
+    end
+  end
+
+  def destroy
+    @task.destroy
+    redirect_to :root
   end
 
   private
   def task_params
     params.require(:task).permit(:name,:memo,:category_id)
+  end
+
+  def set_task
+    @task = Task.find_by(id: params[:id])
   end
 end
