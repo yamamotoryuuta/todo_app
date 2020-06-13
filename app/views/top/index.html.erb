@@ -7,16 +7,17 @@
             <%= link_to "編集する", edit_category_path(c) %>
           </div>
           <% c.tasks.each do |t| %>
-            <div class="task_card">
-              <p>task_name:<%= t.name %></p>
-              <p>memo:<%= t.memo %></p>
-              <%= link_to "編集", edit_task_path(t) %>
-              <%= link_to "削除", task_path(t), method: :delete, data: { confirm: "#{t.name}を削除して大丈夫ですか？" } %>
-            </div>
+            <%= link_to category_task_path(c,t), class: 'card_wrap' do %>
+              <div class="task_card">
+                <p class="task_card_text"><span>task:</span><%= t.name %></p>
+                <%= link_to "編集", edit_category_task_path(c,t) %>
+                <%= link_to "削除", category_task_path(c,t), method: :delete, data: { confirm: "#{t.name}を削除して大丈夫ですか？" } %>
+              </div>
+            <% end %>
           <% end %>
 
           <p>
-            <%= link_to "taskを追加する", new_task_path(category_id: c.id) %>
+            <%= link_to "taskを追加する", new_category_task_path(category_id: c.id) %>
           </p>
         <% end %>
     <% end %>

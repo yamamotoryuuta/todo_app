@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :set_task , only: %i( edit update destroy)
+  before_action :set_task , only: %i(show edit update destroy)
   def new
     @task = Task.new
   end
@@ -11,6 +11,9 @@ class TasksController < ApplicationController
     else
       render action: :new
     end
+  end
+
+  def show
   end
 
   def edit

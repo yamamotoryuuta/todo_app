@@ -1,12 +1,28 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.card_wrap{
+  display: block;
+  background-color: #ededed;
+}
+
+
 .task_card {
   width: 100%;
   height: auto;
   padding: 10px;
   background-color: #fff;
   margin-bottom: 10px;
+}
+
+.task_card_text {
+  font-size: 2.4rem;
+  line-height: 2;
+}
+
+.task_card_text > span{
+  font-size: 1.6rem;
+  margin-right: 10px;
 }
 
 .task_container {
@@ -36,4 +52,13 @@
 
 .form_selecter{
   margin-bottom: 10px;
+}
+
+.task_show_name, .task_show_memo {
+  font-size: 2.4rem;
+}
+
+.task_show_name > span, .task_show_memo > span {
+  font-size: 1.6rem;
+  margin-right: 10px;
 }
